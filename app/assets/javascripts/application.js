@@ -56,7 +56,7 @@ function scrollTo(el) {
 	speed = Math.abs(targetY - currentY - topBarHeight)%25;
 	if(speed == 0 && currentY + topBarHeight != targetY ) {speed = 25;}
 	var animator = setTimeout('scrollTo(\''+ el +'\')', 24);
-	if (window.pageYOffset + screen.height >= document.body.scrollHeight) {
+	if (window.pageYOffset + screen.height >= document.body.scrollHeight && el == "footer") {
 		clearTimeout(animator);
 	}
 	if (currentY + topBarHeight < targetY) {
