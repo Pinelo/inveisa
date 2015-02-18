@@ -1,0 +1,30 @@
+<div class="footer">
+	<div class="row">
+		<div class="large-3 medium-3 small-3 columns">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3596.594965640316!2d-100.28954000000002!3d25.651565!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bfcee61c0709%3A0xab5b4cc298e6fe08!2sTecnol%C3%B3gico+de+Monterrey!5e0!3m2!1sen!2smx!4v1423251624295" width="400" height="300" frameborder="0" style="border:0"></iframe>		
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, sit.</p>
+		</div>
+		<div class="large-3 medium-3 small-3 columns"></div>
+		<div class="large-6 medium-6 small-6 columns">
+			<%= form_tag (mailer_path) do%>
+				<div class="row">
+					<div class="large-7 medium-7 small-7 columns">
+						<%= text_field_tag "Correo", nil, placeholder: "Tu Correo" %>
+					</div>
+					<div class="large-5 medium-5 small-5 columns">
+						<%= text_field_tag "Ciudad", nil, placeholder: "Tu Ciudad" %>
+					</div>
+				</div>
+				<div class="row">
+					<div class="large-7 medium-7 small-7 columns">
+						<%= text_field_tag "Nombre", nil, placeholder: "Tu Nombre" %>
+					</div>
+					<div class="large-5 medium-5 small-5 columns">
+						<%= submit_tag "Enviar", id:"send_mail"%>
+					</div>
+				</div>
+				<%= text_area_tag "Mensaje"%>				
+			<% end %>
+		</div>
+	</div>
+</div>
